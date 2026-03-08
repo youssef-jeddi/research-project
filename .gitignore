@@ -1,0 +1,15 @@
+# Python virtual environment
+.env/
+
+# All EZKL generated artifacts
+artifacts/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
