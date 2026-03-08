@@ -76,6 +76,11 @@ async def main():
         await setup_model(args.model, paths)
     else:
         print(f"Reusing existing setup from {out_dir}")
+        
+    sol_path = str(Path(paths["dir"]) / "verifier.sol")
+    print(f"Generating Solidity verifier for {args.model}...")
+    ezkl.create_evm_verifier(paths["vk"], paths["settings"], sol_path)
+    print(f"Verifier contract saved to {sol_path}")
 
     # Generate witness
     print("Generating witness...")

@@ -2,3 +2,4 @@ torch
 ezkl
 numpy
 onnx
+web3
